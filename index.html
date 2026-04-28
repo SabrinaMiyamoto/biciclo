@@ -1,29 +1,33 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/logo.biciclo.png" type="image/x-icon">
     <title>BICICLO Floripa | MVP</title>
+    
     <link rel="stylesheet" href="index.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-
-    <nav class="navbar">
+<nav class="navbar">
         <div class="logo"><img src="/img/logo.biciclo.png" alt="Logo BICICLO Floripa" class="logo-navbar">BICICLO<span> Floripa</span></div>
         <ul>
             <li><a href="#problemas">Problemas</a></li>
             <li><a href="#beneficiarios">Beneficiários</a></li>
+            <li><a href="#colaboradores">Equipe</a></li>
+            <li><a href="#contato">Colabore</a></li>
         </ul>
     </nav>
 
-<header class="hero">
-    <div class="hero-content">
-        <img src="/img/logo.biciclo.png" alt="Logo BICICLO Floripa" class="logo-hero">
-        <h1>BICICLO Floripa</h1>
-        <p>Mapeamento de ciclovias, ciclofaixas e bicicletários para Florianópolis.</p>
-    </div>
-</header>
+    <header class="hero">
+        <div class="hero-content">
+            <img src="/img/logo.biciclo.png" alt="Logo BICICLO Floripa" class="logo-hero">
+            <h1>BICICLO Floripa</h1>
+            <p>Mapeamento de ciclovias, ciclofaixas e bicicletários para Florianópolis.</p>
+        </div>
+    </header>
+
     <section id="problemas" class="section-container">
         <h2>O Problema</h2>
         <div class="grid-problemas">
@@ -55,9 +59,45 @@
         </ul>
     </section>
 
+    <section id="colaboradores" class="section-container">
+        <h2>Equipe Técnica</h2>
+        <div class="grid-colaboradores">
+            <div class="card-colaborador">
+                <div class="foto-colaborador">
+                    <img src="/img/foto.jpg" alt="Foto Sabrina"> </div>
+                <strong>Sabrina Miyamoto</strong>
+                <p>Tech Lead & Full Stack</p>
+            </div>
+
+            <div class="card-colaborador">
+                <div class="foto-colaborador">
+                    <img src="/img//WhatsApp Image 2026-04-28 at 19.31.24.jpeg" alt="Foto Colaborador 2">
+                </div>
+                <strong>NBruno dos Reis Machado</strong>
+                <p>Análise de Requisitos</p>
+            </div>
+
+            <div class="card-colaborador">
+                <div class="foto-colaborador">
+                    <img src="/img/WhatsApp Image 2026-04-27 at 21.43.38.jpeg" alt="Leoncio">
+                </div>
+                <strong>Leoncio Leitão</strong>
+                <p>UX/UI Design</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section-container bg-light">
+        <h2>Colabore Conosco</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Tem sugestões de rotas ou melhorias para o mapeamento? Envie para nossa análise técnica.</p>
+        
+        <form action="https://formspree.io/f/mrernkwe" method="POST" class="form-contato">
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <textarea name="mensagem" placeholder="Sua sugestão técnico/funcional..." rows="5" required></textarea>
+            <button type="submit" class="btn-enviar">Enviar Sugestão</button>
+        </form>
+    </section>
+
     <footer>
         <p>&copy; 2026 BICICLO Floripa</p>
     </footer>
-
-</body>
-</html>
