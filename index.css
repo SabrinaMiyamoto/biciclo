@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+
+:root {
+    --verde-principal: #8eb067; 
+    --cinza-escuro: #2d3436;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: white;
+    border-bottom: 4px solid var(--verde-principal);
+}
+.logo-navbar{
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: var(--verde-principal);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--cinza-escuro);
+    font-weight: 600;
+}
+.hero {
+    background-color: var(--verde-principal);
+    color: white;
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+.logo-hero {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-container {
+    padding: 80px 10%;
+}
+
+.bg-light {
+    background-color: #f8f9fa;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    color: var(--cinza-escuro);
+    text-transform: uppercase;
+}
+.grid-problemas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
+    gap: 30px;
+}
+
+.item-problema {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 20px;
+}
+.lista-simples {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.lista-simples li {
+    background: white;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-left: 5px solid var(--verde-principal);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+footer {
+    background: var(--cinza-escuro);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
