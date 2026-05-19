@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BICICLO | Sistema de Recompensas</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: #f4f4f9; }
+        h1, h2 { color: #333; text-align: center; }
+        
+        /* Menu IDêntico ao Principal */
+        .navbar { display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 15px 30px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .navbar .logo { font-weight: bold; font-size: 1.2rem; color: #333; display: flex; align-items: center; }
+        .navbar .logo span { color: #2ecc71; }
+        .navbar .logo-navbar { height: 30px; margin-right: 10px; }
+        .navbar ul { list-style: none; display: flex; margin: 0; padding: 0; }
+        .navbar ul li { margin-left: 20px; }
+        .navbar ul li a { text-decoration: none; color: #555; font-weight: bold; }
+        .navbar ul li a:hover { color: #8eb067; }
+        
+        .content-container { padding: 20px; }
+        .grid-gamificacao { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1000px; margin: 30px auto; }
+        .card { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-left: 5px solid #f1c40f; }
+        .card h3 { margin-top: 0; color: #2c3e50; }
+        .badge { background: #f1c40f; color: #fff; padding: 6px 12px; border-radius: 4px; font-weight: bold; font-size: 16px; display: inline-block; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><img src="/img/logo.biciclo.png" alt="Logo BICICLO Floripa" class="logo-navbar">BICICLO<span> Floripa</span></div>
+        <ul>
+            <li><a href="index.html#problemas">Problemas</a></li>
+            <li><a href="index.html#beneficiarios">Beneficiários</a></li>
+            <li><a href="index.html#colaboradores">Equipe</a></li>
+            <li><a href="rotas.html">Mapa de Rotas</a></li>
+            <li><a href="transporte.html">Integração</a></li>
+            <li><a href="beneficios.html">Benefícios</a></li>
+            <li><a href="index.html#contato">Colabore Conosco</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-container">
+        <h1>Gamificação - Pedale e Ganhe Recompensas</h1>
+        <h2>Transforme seus quilômetros rodados em benefícios no comércio local</h2>
+
+        <div class="grid-gamificacao">
+            <div class="card">
+                <h3>Seu Painel de Pontos</h3>
+                <p>Monitore seu desempenho operacional e acúmulo de créditos no ecossistema.</p>
+                <p><strong>Pontos Atuais:</strong> <span class="badge">120 pts</span></p>
+            </div>
+
+            <div class="card">
+                <h3>Meta Semanal</h3>
+                <p>Incentivo à micromobilidade ativa contínua.</p>
+                <p><strong>Objetivo:</strong> Pedalar mais 5 km para atingir o nível Ouro e desbloquear novas vantagens.</p>
+            </div>
+
+            <div class="card">
+                <h3>Cupom Ciclo Vilca</h3>
+                <p>Parceria comercial voltada à manutenção preventiva.</p>
+                <p><strong>Recompensa:</strong> 10% de desconto em componentes e acessórios.</p>
+                <p><span class="badge">Resgatar com 50 pts</span></p>
+            </div>
+
+            <div class="card">
+                <h3>Cupom Oficina Pedale</h3>
+                <p>Suporte técnico especializado para segurança do modal.</p>
+                <p><strong>Recompensa:</strong> Alinhamento e revisão básica de freios gratuita.</p>
+                <p><span class="badge">Resgatar com 100 pts</span></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

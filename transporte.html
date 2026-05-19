@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BICICLO | Integração de Modais</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: #f4f4f9; }
+        h1, h2 { color: #333; text-align: center; }
+        
+        /* Menu IDêntico ao Principal */
+        .navbar { display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 15px 30px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .navbar .logo { font-weight: bold; font-size: 1.2rem; color: #333; display: flex; align-items: center; }
+        .navbar .logo span { color: #8eb067 }
+        .navbar .logo-navbar { height: 30px; margin-right: 10px; }
+        .navbar ul { list-style: none; display: flex; margin: 0; padding: 0; }
+        .navbar ul li { margin-left: 20px; }
+        .navbar ul li a { text-decoration: none; color: #555; font-weight: bold; }
+        .navbar ul li a:hover { color: #2ecc71; }
+        
+        .content-container { padding: 20px; }
+        .grid-transporte { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1000px; margin: 30px auto; }
+        .card { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-left: 5px solid #3498db; }
+        .card h3 { margin-top: 0; color: #2c3e50; }
+        .status { color: #27ae60; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><img src="/img/logo.biciclo.png" alt="Logo BICICLO Floripa" class="logo-navbar">BICICLO<span> Floripa</span></div>
+        <ul>
+            <li><a href="index.html#problemas">Problemas</a></li>
+            <li><a href="index.html#beneficiarios">Beneficiários</a></li>
+            <li><a href="index.html#colaboradores">Equipe</a></li>
+            <li><a href="rotas.html">Mapa de Rotas</a></li>
+            <li><a href="transporte.html">Integração</a></li>
+            <li><a href="beneficios.html">Benefícios</a></li>
+            <li><a href="index.html#contato">Colabore Conosco</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-container">
+        <h1>Intermodalidade Urbana</h1>
+        <h2>Integração técnica com os Terminais de Integração de Florianópolis</h2>
+
+        <div class="grid-transporte">
+            <div class="card">
+                <h3>TICEN - Centro</h3>
+                <p><strong>Bicicletário:</strong> 60 vagas disponíveis</p>
+                <p><strong>Monitoramento:</strong> Eletrônico por CFTV</p>
+                <p><strong>Conectividade:</strong> Acesso direto ao eixo insular-continental e Ciclovia Beira-Mar Norte.</p>
+                <p class="status">● Operacional</p>
+            </div>
+
+            <div class="card">
+                <h3>TITRI - Trindade</h3>
+                <p><strong>Bicicletário:</strong> 30 vagas disponíveis</p>
+                <p><strong>Estrutura:</strong> Vagas cobertas com necessidade de dispositivo de tranca individual.</p>
+                <p><strong>Conectividade:</strong> Ponto estratégico para o fluxo universitário da UFSC e bacia do Itacorubi.</p>
+                <p class="status">● Operacional</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
