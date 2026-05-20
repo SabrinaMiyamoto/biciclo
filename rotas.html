@@ -4,32 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biciclo - Rotas e Parceiros</title>
-    <style>
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: #f4f4f9; }
-        h1, h2 { color: #333; text-align: center; }
-        
-        /* Menu IDêntico ao Principal */
-        .navbar { display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 15px 30px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .navbar .logo { font-weight: bold; font-size: 1.2rem; color: #333; display: flex; align-items: center; }
-        .navbar .logo span { color: #8eb067; }
-        .navbar .logo-navbar { height: 30px; margin-right: 10px; }
-        .navbar ul { list-style: none; display: flex; margin: 0; padding: 0; }
-        .navbar ul li { margin-left: 20px; }
-        .navbar ul li a { text-decoration: none; color: #555; font-weight: bold; }
-        .navbar ul li a:hover { color: #8eb067; }
-        
-        .content-container { padding: 20px; }
-        .map-container { width: 100%; height: 400px; margin-bottom: 30px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        iframe { width: 100%; height: 100%; border: none; }
-        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px; }
-        .card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-left: 5px solid #2ecc71; }
-        .card h3 { margin-top: 0; }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo"><img src="/img/logo.biciclo.png" alt="Logo BICICLO Floripa" class="logo-navbar">BICICLO<span> Floripa</span></div>
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <ul>
             <li><a href="index.html#problemas">Problemas</a></li>
             <li><a href="index.html#beneficiarios">Beneficiários</a></li>
@@ -41,32 +26,50 @@
         </ul>
     </nav>
 
-    <div class="content-container">
-        <h1>BICICLO Floripa - Rotas e Conectividade</h1>
+    <div class="content-container" style="padding: 80px 10%;">
+        <h1 style="text-align: center; margin-bottom: 20px; font-size: 2.5rem; text-transform: uppercase; color: #2d3436;">BICICLO Floripa - Rotas e Conectividade</h1>
         
-        <div class="map-container">
-            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-48.5350%2C-27.6100%2C-48.4950%2C-27.5800&amp;layer=mapnik&amp;marker=-27.5948%2C-48.5146"></iframe>
+        <div style="width: 100%; height: 450px; margin-bottom: 50px; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.08); border: 1px solid #ddd;">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-48.5350%2C-27.6100%2C-48.4950%2C-27.5800&amp;layer=mapnik&amp;marker=-27.5948%2C-48.5146" style="width: 100%; height: 100%; border: none;"></iframe>
         </div>
 
-        <h2>Parceiros e Colaboradores Locais</h2>
-        <div class="grid-layout">
-            <div class="card">
-                <h3>Ciclo Vilca</h3>
-                <p><strong>Serviço:</strong> Manutenção e Venda de Bicicletas</p>
+        <h2 style="text-align: center; margin-bottom: 50px; font-size: 2rem; color: #2d3436; text-transform: uppercase;">Parceiros e Colaboradores Locais</h2>
+        <div class="grid-colaboradores">
+            <div class="card-colaborador">
+                <strong>Ciclo Vilca</strong>
+                <p style="margin: 10px 0 5px;"><strong>Serviço:</strong> Manutenção e Venda</p>
                 <p><strong>Localização:</strong> Centro, Florianópolis - SC</p>
             </div>
-            <div class="card">
-                <h3>Oficina Pedale</h3>
-                <p><strong>Serviço:</strong> Suporte Técnico e Peças</p>
+            <div class="card-colaborador">
+                <strong>Oficina Pedale</strong>
+                <p style="margin: 10px 0 5px;"><strong>Serviço:</strong> Suporte Técnico e Peças</p>
                 <p><strong>Localização:</strong> Trindade, Florianópolis - SC</p>
             </div>
-            <div class="card">
-                <h3>Bike Tech Floripa</h3>
-                <p><strong>Serviço:</strong> Aluguel e Equipamentos de Segurança</p>
+            <div class="card-colaborador">
+                <strong>Bike Tech Floripa</strong>
+                <p style="margin: 10px 0 5px;"><strong>Serviço:</strong> Aluguel e Equipamentos</p>
                 <p><strong>Localização:</strong> Santa Mônica, Florianópolis - SC</p>
             </div>
         </div>
     </div>
 
+    <footer>
+        <p>&copy; 2026 BICICLO Floripa</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.navbar ul');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
+            navMenu.classList.toggle('active');
+        });
+        document.querySelectorAll('.navbar ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('open');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

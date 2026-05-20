@@ -1,25 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/logo.biciclo.png" type="image/x-icon">
     <title>BICICLO Floripa | MVP</title>
-    
     <link rel="stylesheet" href="index.css">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<nav class="navbar">
-        <div class="logo"><img src="/img/logo.biciclo.png" alt="Logo BICICLO Floripa" class="logo-navbar">BICICLO<span> Floripa</span></div>
-        <ul>
-<li><a href="#problemas">Problemas</a></li>
-        <li><a href="#beneficiarios">Beneficiários</a></li>
-        <li><a href="#colaboradores">Equipe</a></li>
-        <li><a href="rotas.html">Mapa de Rotas</a></li>
-        <li><a href="transporte.html">Integração</a></li>
-        <li><a href="beneficios.html">Benefícios</a></li>
-        <li><a href="#contato">Colabore Conosco</a></li>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/img/logo.biciclo.png" alt="Logo BICICLO Floripa" class="logo-navbar">BICICLO<span> Floripa</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html#problemas">Problemas</a></li>
+            <li><a href="index.html#beneficiarios">Beneficiários</a></li>
+            <li><a href="index.html#colaboradores">Equipe</a></li>
+            <li><a href="./rotas.html">Mapa de Rotas</a></li>
+            <li><a href="./transporte.html">Transporte</a></li>
+            <li><a href="./beneficios.html">Benefícios</a></li>
+            <li><a href="index.html#contato">Colabore Conosco</a></li>
         </ul>
     </nav>
 
@@ -67,19 +76,18 @@
         <div class="grid-colaboradores">
             <div class="card-colaborador">
                 <div class="foto-colaborador">
-                    <img src="/img/foto.jpg" alt="Foto Sabrina"> </div>
+                    <img src="/img/foto.jpg" alt="Foto Sabrina">
+                </div>
                 <strong>Sabrina Miyamoto</strong>
                 <p>Desenvolvedora</p>
             </div>
-
             <div class="card-colaborador">
                 <div class="foto-colaborador">
-                    <img src="/img//WhatsApp Image 2026-04-28 at 19.31.24.jpeg" alt="Foto Colaborador 2">
+                    <img src="/img/WhatsApp Image 2026-04-28 at 19.31.24.jpeg" alt="Foto Colaborador 2">
                 </div>
                 <strong>Bruno dos Reis Machado</strong>
                 <p>Análise de Requisitos</p>
             </div>
-
             <div class="card-colaborador">
                 <div class="foto-colaborador">
                     <img src="/img/WhatsApp Image 2026-04-27 at 21.43.38.jpeg" alt="Leoncio">
@@ -93,7 +101,6 @@
     <section id="contato" class="section-container bg-light">
         <h2>Colabore Conosco</h2>
         <p style="text-align: center; margin-bottom: 30px;">Tem sugestões de rotas ou melhorias para o mapeamento? Envie para nossa análise técnica.</p>
-        
         <form action="https://formspree.io/f/mrernkwe" method="POST" class="form-contato">
             <input type="email" name="email" placeholder="Seu e-mail" required>
             <textarea name="mensagem" placeholder="Sua sugestão técnico/funcional..." rows="5" required></textarea>
@@ -104,3 +111,20 @@
     <footer>
         <p>&copy; 2026 BICICLO Floripa</p>
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
+            navMenu.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('open');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

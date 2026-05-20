@@ -1,0 +1,53 @@
+/* Estilos do botão hambúrguer (escondido no desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--cinza-escuro);
+    transition: all 0.3s ease;
+}
+
+/* Regras para Telas Mobile (tamanho máximo de 768px) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Mostra o botão hambúrguer */
+    }
+
+    .navbar ul.nav-links {
+        display: none; /* Esconde as opções por padrão */
+        flex-direction: column;
+        position: absolute;
+        top: 84px; /* Ajuste dependendo da altura da sua navbar */
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 4px solid var(--verde-principal);
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        z-index: 1000;
+    }
+
+    .navbar ul.nav-links.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+
+    .navbar ul li {
+        margin: 15px 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .navbar ul li margin-left {
+        margin-left: 0;
+    }
+}
